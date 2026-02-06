@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Welfare Department - Serving Our Community</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * { scroll-behavior: smooth; }
+        .hero-gradient { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .card-hover { transition: all 0.3s ease; }
+        .card-hover:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+        .service-card { transition: all 0.3s ease; }
+        .service-card:hover { transform: translateY(-3px); }
+        .testimonial-card { transition: all 0.3s ease; }
+        .testimonial-card:hover { transform: translateY(-3px); }
+        .gallery-item { transition: all 0.3s ease; }
+        .gallery-item:hover { transform: scale(1.05); }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-sm z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <i class="fas fa-hands-helping text-purple-600 text-2xl mr-3"></i>
+                    <span class="text-xl font-bold text-gray-900">Social Welfare Dept.</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-purple-600 transition font-medium">Home</a>
+                    <a href="about.html" class="text-gray-700 hover:text-purple-600 transition font-medium">About</a>
+                    <a href="services.html" class="text-gray-700 hover:text-purple-600 transition font-medium">Services</a>
+                    <a href="gallery.html" class="text-gray-700 hover:text-purple-600 transition font-medium">Gallery</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-purple-600 transition font-medium">Contact</a>
+                    <button class="bg-purple-600 text-white px-6 py-2 rounded-full hover:bg-purple-700 transition">
+                        Donate Now
+                    </button>
+                </div>
+                <button class="md:hidden text-gray-700" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
+            <div class="px-4 py-2 space-y-2">
+                <a href="index.html" class="block py-2 text-gray-700 hover:text-purple-600 font-medium">Home</a>
+                <a href="about.html" class="block py-2 text-gray-700 hover:text-purple-600 font-medium">About</a>
+                <a href="services.html" class="block py-2 text-gray-700 hover:text-purple-600 font-medium">Services</a>
+                <a href="gallery.html" class="block py-2 text-gray-700 hover:text-purple-600 font-medium">Gallery</a>
+                <a href="contact.html" class="block py-2 text-gray-700 hover:text-purple-600 font-medium">Contact</a>
+                <button class="w-full bg-purple-600 text-white px-6 py-2 rounded-full hover:bg-purple-700 transition">
+                    Donate Now
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-12 items-center py-16 lg:py-24">
+                <div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+                        Serving Our Community with
+                        <span class="text-purple-600"> Compassion & Care</span>
+                    </h1>
+                    <p class="text-xl text-gray-600 mb-8">
+                        We are dedicated to improving the lives of those in need through comprehensive social welfare programs, community support, and sustainable development initiatives.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 mb-8">
+                        <button class="hero-gradient text-white px-8 py-4 rounded-full text-lg font-semibold hover:opacity-90 transition">
+                            Get Help Now
+                        </button>
+                        <button class="bg-white text-purple-600 border-2 border-purple-600 px-8 py-4 rounded-full text-lg font-semibold hover:bg-purple-50 transition">
+                            Volunteer
+                        </button>
+                    </div>
+                    <div class="flex flex-wrap gap-6 text-sm text-gray-600">
+                        <div class="flex items-center">
+                            <i class="fas fa-users text-purple-600 mr-2"></i>
+                            10,000+ Families Helped
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-hands-helping text-purple-600 mr-2"></i>
+                            50+ Programs
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-purple-600 mr-2"></i>
+                            15+ Locations
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Community Service" class="rounded-2xl shadow-2xl w-full">
+                    <div class="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-lg p-4">
+                        <div class="flex items-center space-x-3">
+                            <div class="bg-purple-100 rounded-full p-3">
+                                <i class="fas fa-heart text-purple-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <div class="text-2xl font-bold text-gray-900">24/7</div>
+                                <div class="text-sm text-gray-600">Emergency Support</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Stats -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-8 text-center">
+                <div class="card-hover bg-gray-50 p-8 rounded-xl">
+                    <div class="text-4xl font-bold text-purple-600 mb-2">10,000+</div>
+                    <div class="text-gray-600">Families Supported</div>
+                </div>
+                <div class="card-hover bg-gray-50 p-8 rounded-xl">
+                    <div class="text-4xl font-bold text-purple-600 mb-2">500+</div>
+                    <div class="text-gray-600">Volunteers</div>
+                </div>
+                <div class="card-hover bg-gray-50 p-8 rounded-xl">
+                    <div class="text-4xl font-bold text-purple-600 mb-2">50+</div>
+                    <div class="text-gray-600">Active Programs</div>
+                </div>
+                <div class="card-hover bg-gray-50 p-8 rounded-xl">
+                    <div class="text-4xl font-bold text-purple-600 mb-2">15+</div>
+                    <div class="text-gray-600">Service Centers</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Services -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+                    Our Core Services
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    We provide comprehensive support services to address the diverse needs of our community members.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="service-card bg-white p-8 rounded-xl border border-gray-200">
+                    <div class="w-14 h-14 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-utensils text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Food Assistance</h3>
+                    <p class="text-gray-600 mb-4">
+                        Providing nutritious meals and food supplies to families facing food insecurity through our food banks and meal programs.
+                    </p>
+                    <a href="services.html" class="text-purple-600 font-semibold hover:text-purple-700 transition">
+                        Learn More <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                <div class="service-card bg-white p-8 rounded-xl border border-gray-200">
+                    <div class="w-14 h-14 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-graduation-cap text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Education Support</h3>
+                    <p class="text-gray-600 mb-4">
+                        Offering educational resources, tutoring services, and scholarship programs for underprivileged children and youth.
+                    </p>
+                    <a href="services.html" class="text-purple-600 font-semibold hover:text-purple-700 transition">
+                        Learn More <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                <div class="service-card bg-white p-8 rounded-xl border border-gray-200">
+                    <div class="w-14 h-14 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-heartbeat text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Healthcare Services</h3>
+                    <p class="text-gray-600 mb-4">
+                        Providing access to medical care, health screenings, and wellness programs for vulnerable community members.
+                    </p>
+                    <a href="services.html" class="text-purple-600 font-semibold hover:text-purple-700 transition">
+                        Learn More <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                <div class="service-card bg-white p-8 rounded-xl border border-gray-200">
+                    <div class="w-14 h-14 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-home text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Shelter & Housing</h3>
+                    <p class="text-gray-600 mb-4">
+                        Emergency shelter services and housing assistance for homeless individuals and families in crisis situations.
+                    </p>
+                    <a href="services.html" class="text-purple-600 font-semibold hover:text-purple-700 transition">
+                        Learn More <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                <div class="service-card bg-white p-8 rounded-xl border border-gray-200">
+                    <div class="w-14 h-14 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-briefcase text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Job Training</h3>
+                    <p class="text-gray-600 mb-4">
+                        Vocational training and employment assistance programs to help individuals gain financial independence.
+                    </p>
+                    <a href="services.html" class="text-purple-600 font-semibold hover:text-purple-700 transition">
+                        Learn More <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                <div class="service-card bg-white p-8 rounded-xl border border-gray-200">
+                    <div class="w-14 h-14 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-child text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Child Welfare</h3>
+                    <p class="text-gray-600 mb-4">
+                        Protection and support services for children, including foster care and adoption assistance programs.
+                    </p>
+                    <a href="services.html" class="text-purple-600 font-semibold hover:text-purple-700 transition">
+                        Learn More <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="services.html" class="hero-gradient text-white px-8 py-3 rounded-full font-semibold hover:opacity-90 transition inline-block">
+                    View All Services
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recent Activities -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+                    Recent Activities & Events
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Stay updated with our latest community initiatives and upcoming events.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="card-hover bg-white rounded-xl overflow-hidden border border-gray-200">
+                    <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Food Drive" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="text-sm text-purple-600 font-semibold mb-2">December 15, 2024</div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Annual Food Drive Campaign</h3>
+                        <p class="text-gray-600 mb-4">
+                            Successfully distributed food packages to over 500 families during our winter food drive campaign.
+                        </p>
+                        <a href="#" class="text-purple-600 font-semibold hover:text-purple-700 transition">
+                            Read More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="card-hover bg-white rounded-xl overflow-hidden border border-gray-200">
+                    <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Education Program" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="text-sm text-purple-600 font-semibold mb-2">December 10, 2024</div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Back to School Program</h3>
+                        <p class="text-gray-600 mb-4">
+                            Distributed school supplies and uniforms to 200+ children for the new academic year.
+                        </p>
+                        <a href="#" class="text-purple-600 font-semibold hover:text-purple-700 transition">
+                            Read More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="card-hover bg-white rounded-xl overflow-hidden border border-gray-200">
+                    <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Health Camp" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="text-sm text-purple-600 font-semibold mb-2">December 5, 2024</div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Free Health Check-up Camp</h3>
+                        <p class="text-gray-600 mb-4">
+                            Organized a comprehensive health screening camp serving over 300 community members.
+                        </p>
+                        <a href="#" class="text-purple-600 font-semibold hover:text-purple-700 transition">
+                            Read More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 hero-gradient">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">
+                Make a Difference Today
+            </h2>
+            <p class="text-xl text-purple-100 mb-8">
+                Your support helps us continue our mission to serve those in need. Every contribution makes a real impact.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button class="bg-white text-purple-600 px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transition transform hover:scale-105">
+                    <i class="fas fa-heart mr-2"></i> Donate Now
+                </button>
+                <button class="bg-transparent text-white border-2 border-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white hover:text-purple-600 transition">
+                    <i class="fas fa-hands-helping mr-2"></i> Volunteer
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-hands-helping text-purple-400 text-2xl mr-3"></i>
+                        <span class="text-xl font-bold text-white">Social Welfare Dept.</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        Serving our community with compassion, dignity, and respect for over 25 years.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-purple-400 transition">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-purple-400 transition">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-purple-400 transition">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-purple-400 transition">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-400 hover:text-purple-400 transition">About Us</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-purple-400 transition">Our Services</a></li>
+                        <li><a href="gallery.html" class="text-gray-400 hover:text-purple-400 transition">Gallery</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-purple-400 transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="services.html" class="text-gray-400 hover:text-purple-400 transition">Food Assistance</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-purple-400 transition">Education Support</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-purple-400 transition">Healthcare</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-purple-400 transition">Emergency Help</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Contact Info</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            123 Welfare Street, City Center
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-2"></i>
+                            +1 (555) 123-4567
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2"></i>
+                            info@socialwelfare.org
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-clock mr-2"></i>
+                            Mon-Fri: 9AM-6PM
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center">
+                <p class="text-gray-400">
+                    © 2024 Social Welfare Department. All rights reserved. | 
+                    <a href="#" class="hover:text-purple-400 transition">Privacy Policy</a> | 
+                    <a href="#" class="hover:text-purple-400 transition">Terms of Service</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    document.getElementById('mobileMenu').classList.add('hidden');
+                }
+            });
+        });
+
+        // Add scroll effect to navigation
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-lg');
+            } else {
+                nav.classList.remove('shadow-lg');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Social Welfare Department</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * { scroll-behavior: smooth; }
+        .hero-gradient { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .card-hover { transition: all 0.3s ease; }
+        .card-hover:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+        .timeline-item { transition: all 0.3s ease; }
+        .timeline-item:hover { transform: translateX(10px); }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-sm z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <i class="fas fa-hands-helping text-purple-600 text-2xl mr-3"></i>
+                    <span class="text-xl font-bold text-gray-900">Social Welfare Dept.</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-purple-600 transition font-medium">Home</a>
+                    <a href="about.html" class="text-purple-600 font-medium">About</a>
+                    <a href="services.html" class="text-gray-700 hover:text-purple-600 transition font-medium">Services</a>
+                    <a href="gallery.html" class="text-gray-700 hover:text-purple-600 transition font-medium">Gallery</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-purple-600 transition font-medium">Contact</a>
+                    <button class="bg-purple-600 text-white px-6 py-2 rounded-full hover:bg-purple-700 transition">
+                        Donate Now
+                    </button>
+                </div>
+                <button class="md:hidden text-gray-700" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
+            <div class="px-4 py-2 space-y-2">
+                <a href="index.html" class="block py-2 text-gray-700 hover:text-purple-600 font-medium">Home</a>
+                <a href="about.html" class="block py-2 text-purple-600 font-medium">About</a>
+                <a href="services.html" class="block py-2 text-gray-700 hover:text-purple-600 font-medium">Services</a>
+                <a href="gallery.html" class="block py-2 text-gray-700 hover:text-purple-600 font-medium">Gallery</a>
+                <a href="contact.html" class="block py-2 text-gray-700 hover:text-purple-600 font-medium">Contact</a>
+                <button class="w-full bg-purple-600 text-white px-6 py-2 rounded-full hover:bg-purple-700 transition">
+                    Donate Now
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="hero-gradient rounded-2xl p-12 lg:p-16 text-center text-white">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
+                    About Our Organization
+                </h1>
+                <p class="text-xl max-w-3xl mx-auto opacity-90">
+                    For over 25 years, we've been dedicated to serving our community with compassion, dignity, and unwavering commitment.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Story -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+                        Our Story & Mission
+                    </h2>
+                    <div class="space-y-4 text-gray-600 mb-8">
+                        <p>
+                            The Social Welfare Department was established in 1999 with a simple yet powerful mission: to provide comprehensive support and assistance to the most vulnerable members of our community. What started as a small team of passionate volunteers has grown into a full-fledged organization serving thousands of families annually.
+                        </p>
+                        <p>
+                            Our approach is rooted in the belief that everyone deserves access to basic necessities, dignity, and the opportunity to thrive. We work tirelessly to break the cycle of poverty and create lasting positive change in our community.
+                        </p>
+                        <p>
+                            Through our diverse programs and services, we address immediate needs while also implementing long-term solutions that empower individuals and families to achieve self-sufficiency.
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-purple-600 mb-2">25+</div>
+                            <div class="text-gray-600">Years of Service</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-purple-600 mb-2">50,000+</div>
+                            <div class="text-gray-600">Lives Impacted</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Team Working" class="rounded-2xl shadow-xl w-full">
+                    <div class="absolute -bottom-6 -right-6 bg-purple-600 text-white rounded-xl shadow-lg p-6">
+                        <div class="text-2xl font-bold mb-1">Our Vision</div>
+                        <div class="text-sm opacity-90">A community where everyone has access to basic needs and opportunities for growth.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+                    Our Core Values
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    These principles guide everything we do and shape our approach to community service.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="card-hover bg-white p-8 rounded-xl border border-gray-200 text-center">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-heart text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Compassion</h3>
+                    <p class="text-gray-600">
+                        We approach every individual with empathy and understanding, recognizing the inherent dignity in all people.
+                    </p>
+                </div>
+                <div class="card-hover bg-white p-8 rounded-xl border border-gray-200 text-center">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-shield-alt text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Integrity</h3>
+                    <p class="text-gray-600">
+                        We operate with transparency, honesty, and accountability in all our programs and operations.
+                    </p>
+                </div>
+                <div class="card-hover bg-white p-8 rounded-xl border border-gray-200 text-center">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-users text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Community</h3>
+                    <p class="text-gray-600">
+                        We believe in the power of collective action and work collaboratively with all stakeholders.
+                    </p>
+                </div>
+                <div class="card-hover bg-white p-8 rounded-xl border border-gray-200 text-center">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-lightbulb text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Innovation</h3>
+                    <p class="text-gray-600">
+                        We continuously seek creative solutions to address evolving community needs and challenges.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+                    Our Journey
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Key milestones in our 25+ years of service to the community.
+                </p>
+            </div>
+            <div class="max-w-4xl mx-auto">
+                <div class="relative">
+                    <!-- Timeline Line -->
+                    <div class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-purple-200"></div>
+                    
+                    <!-- Timeline Items -->
+                    <div class="space-y-12">
+                        <div class="timeline-item flex items-center">
+                            <div class="w-1/2 pr-8 text-right">
+                                <div class="bg-white p-6 rounded-lg border border-gray-200">
+                                    <div class="text-purple-600 font-semibold mb-2">1999</div>
+                                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Organization Founded</h3>
+                                    <p class="text-gray-600">Started with 5 volunteers and a mission to serve the community.</p>
+                                </div>
+                            </div>
+                            <div class="w-8 h-8 bg-purple-600 rounded-full border-4 border-white relative z-10"></div>
+                            <div class="w-1/2 pl-8"></div>
+                        </div>
+                        
+                        <div class="timeline-item flex items-center">
+                            <div class="w-1/2 pr-8"></div>
+                            <div class="w-8 h-8 bg-purple-600 rounded-full border-4 border-white relative z-10"></div>
+                            <div class="w-1/2 pl-8">
+                                <div class="bg-white p-6 rounded-lg border border-gray-200">
+                                    <div class="text-purple-600 font-semibold mb-2">2005</div>
+                                    <h3 class="text-xl font-semibold text-gray-900 mb-2">First Service Center</h3>
+                                    <p class="text-gray-600">Opened our first permanent service center in the city center.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item flex items-center">
+                            <div class="w-1/2 pr-8 text-right">
+                                <div class="bg-white p-6 rounded-lg border border-gray-200">
+                                    <div class="text-purple-600 font-semibold mb-2">2010</div>
+                                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Expanded Programs</h3>
+                                    <p class="text-gray-600">Launched education and healthcare support programs.</p>
+                                </div>
+                            </div>
+                            <div class="w-8 h-8 bg-purple-600 rounded-full border-4 border-white relative z-10"></div>
+                            <div class="w-1/2 pl-8"></div>
+                        </div>
+                        
+                        <div class="timeline-item flex items-center">
+                            <div class="w-1/2 pr-8"></div>
+                            <div class="w-8 h-8 bg-purple-600 rounded-full border-4 border-white relative z-10"></div>
+                            <div class="w-1/2 pl-8">
+                                <div class="bg-white p-6 rounded-lg border border-gray-200">
+                                    <div class="text-purple-600 font-semibold mb-2">2018</div>
+                                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Regional Expansion</h3>
+                                    <p class="text-gray-600">Extended services to 15+ locations across the region.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item flex items-center">
+                            <div class="w-1/2 pr-8 text-right">
+                                <div class="bg-white p-6 rounded-lg border border-gray-200">
+                                    <div class="text-purple-600 font-semibold mb-2">2024</div>
+                                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Digital Transformation</h3>
+                                    <p class="text-gray-600">Launched online services and digital support platforms.</p>
+                                </div>
+                            </div>
+                            <div class="w-8 h-8 bg-purple-600 rounded-full border-4 border-white relative z-10"></div>
+                            <div class="w-1/2 pl-8"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership Team -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+                    Our Leadership Team
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Meet the dedicated individuals leading our mission to serve the community.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="card-hover bg-white p-8 rounded-xl border border-gray-200 text-center">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Director" class="w-32 h-32 rounded-full mx-auto mb-6 object-cover">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Sarah Johnson</h3>
+                    <div class="text-purple-600 font-semibold mb-4">Executive Director</div>
+                    <p class="text-gray-600 mb-4">
+                        Leading our organization with 20+ years of experience in social work and community development.
+                    </p>
+                    <div class="flex justify-center space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-purple-600 transition">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-purple-600 transition">
+                            <i class="fas fa-envelope text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="card-hover bg-white p-8 rounded-xl border border-gray-200 text-center">
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Program Manager" class="w-32 h-32 rounded-full mx-auto mb-6 object-cover">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Michael Chen</h3>
+                    <div class="text-purple-600 font-semibold mb-4">Program Director</div>
+                    <p class="text-gray-600 mb-4">
+                        Overseeing all program operations and ensuring quality service delivery to our community.
+                    </p>
+                    <div class="flex justify-center space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-purple-600 transition">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-purple-600 transition">
+                            <i class="fas fa-envelope text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="card-hover bg-white p-8 rounded-xl border border-gray-200 text-center">
+                    <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Finance Director" class="w-32 h-32 rounded-full mx-auto mb-6 object-cover">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Emily Rodriguez</h3>
+                    <div class="text-purple-600 font-semibold mb-4">Finance Director</div>
+                    <p class="text-gray-600 mb-4">
+                        Managing our financial resources with transparency and strategic planning for sustainable growth.
+                    </p>
+                    <div class="flex justify-center space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-purple-600 transition">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-purple-600 transition">
+                            <i class="fas fa-envelope text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 hero-gradient">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">
+                Join Our Mission
+            </h2>
+            <p class="text-xl text-purple-100 mb-8">
+                Whether you want to volunteer, donate, or partner with us, there are many ways to make a difference.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="contact.html" class="bg-white text-purple-600 px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transition transform hover:scale-105">
+                    Get Involved
+                </a>
+                <a href="contact.html" class="bg-transparent text-white border-2 border-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white hover:text-purple-600 transition">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-hands-helping text-purple-400 text-2xl mr-3"></i>
+                        <span class="text-xl font-bold text-white">Social Welfare Dept.</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        Serving our community with compassion, dignity, and respect for over 25 years.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-purple-400 transition">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-purple-400 transition">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-purple-400 transition">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-purple-400 transition">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-purple-400 transition">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-purple-400 transition">About Us</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-purple-400 transition">Our Services</a></li>
+                        <li><a href="gallery.html" class="text-gray-400 hover:text-purple-400 transition">Gallery</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="services.html" class="text-gray-400 hover:text-purple-400 transition">Food Assistance</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-purple-400 transition">Education Support</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-purple-400 transition">Healthcare</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-purple-400 transition">Emergency Help</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Contact Info</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            123 Welfare Street, City Center
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-2"></i>
+                            +1 (555) 123-4567
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2"></i>
+                            info@socialwelfare.org
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-clock mr-2"></i>
+                            Mon-Fri: 9AM-6PM
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center">
+                <p class="text-gray-400">
+                    © 2024 Social Welfare Department. All rights reserved. | 
+                    <a href="#" class="hover:text-purple-400 transition">Privacy Policy</a> | 
+                    <a href="#" class="hover:text-purple-400 transition">Terms of Service</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    document.getElementById('mobileMenu').classList.add('hidden');
+                }
+            });
+        });
+
+        // Add scroll effect to navigation
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-lg');
+            } else {
+                nav.classList.remove('shadow-lg');
+            }
+        });
+    </script>
+</body>
+</html>
